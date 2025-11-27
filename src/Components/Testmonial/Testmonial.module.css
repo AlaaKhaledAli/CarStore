@@ -1,0 +1,25 @@
+.testmonial{
+    background: url(../../assets/images/testmonial-bg.png) no-repeat center/cover;
+}
+.slider{
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    width: auto;
+    .cards{
+        animation: spin 10s linear infinite;
+        width:calc(490px*5);
+    }
+    .card{
+        width: 490px;
+        flex-shrink: 0;
+    }
+    .cards:hover{
+        animation-play-state: paused;
+    }
+}
+
+@keyframes spin {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-490px * 2)) }
+}
