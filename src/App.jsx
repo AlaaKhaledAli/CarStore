@@ -1,12 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './Pages/Home/Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MasterLayout from './Pages/MasterLayout/MasterLayout'
-import How from './Components/How/How'
-import Why from './Components/Why/Why'
 import Cars from './Pages/Cars/Cars'
 import CarDetails from './Pages/CarDetails/CarDetails'
 
@@ -20,17 +15,19 @@ function App() {
     children:[
       {index:true,element:<Home/>},
       {path:"home",element:<Home/>},
-      {path:"how",element:<How/>},
-      {path:"why",element:<Why/>},
       {path:"cars",element:<Cars/>},
       {path:"car/:id",element:<CarDetails/>},
     ]
   }
- ])
+ ],
+   {
+    basename: "/CarStore/",
+  }
+)
   return (
     <>
-  <RouterProvider router={routes}></RouterProvider>
-    {/* <Home/> */}
+  <RouterProvider router={routes}>
+  </RouterProvider>
     </>
   )
 }

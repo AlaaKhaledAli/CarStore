@@ -61,8 +61,8 @@ export default function Cars() {
           </li>
 
           <li>
-            <Link onClick={() => setPagination((carList[0].id-1)/ 20 + 2)}
-              className={`${Pagination === (carList[0].id-1)/ 20 + 1
+            <Link onClick={() => setPagination(carList[0]?(carList[0].id-1)/ 20 + 1:1)}
+              className={`${Pagination === (carList[0]?(carList[0].id-1)/ 20 + 1:1)
                 ? 'border-blue-600 bg-blue-600 text-white'
                 : 'border-gray-200'
                 } block size-8 rounded border text-center text-sm/8 font-medium transition-colors`}>
@@ -71,8 +71,8 @@ export default function Cars() {
           </li>
 
           <li>
-            <Link onClick={() => setPagination((carList[0].id-1)/ 20 + 2)}
-              className={`${Pagination === (carList[0].id-1)/ 20 + 2
+            <Link onClick={() => setPagination(carList[0]?(carList[0].id-1)/ 20 + 2:2)}
+              className={`${Pagination === (carList[0]?(carList[0].id-1)/ 20 + 2:2)
                 ? 'border-blue-600 bg-blue-600 text-white'
                 : 'border-gray-200'
                 } block size-8 rounded border text-center text-sm/8 font-medium transition-colors`}>
@@ -81,8 +81,8 @@ export default function Cars() {
           </li>
 
           <li>
-            <Link onClick={() => setPagination((carList[0].id-1)/ 20 + 3)}
-              className={`${Pagination === (carList[0].id-1)/ 20 + 3
+            <Link onClick={() => setPagination(carList[0]?(carList[0].id-1)/ 20 + 3:3)}
+              className={`${Pagination === (carList[0]?(carList[0].id-1)/ 20 + 3:3)
                 ? 'border-blue-600 bg-blue-600 text-white'
                 : 'border-gray-200'
                 } block size-8 rounded border text-center text-sm/8 font-medium transition-colors`}>
@@ -91,8 +91,8 @@ export default function Cars() {
           </li>
 
           <li>
-            <Link onClick={() => setPagination((carList[0].id-1)/ 20 + 4)}
-              className={`${Pagination === (carList[0].id-1)/ 20 + 4
+            <Link onClick={() =>setPagination(carList[0]?(carList[0].id-1)/ 20 + 4:4)}
+              className={`${Pagination === (carList[0]?(carList[0].id-1)/ 20 + 4:4)
                 ? 'border-blue-600 bg-blue-600 text-white'
                 : 'border-gray-200'
                 } block size-8 rounded border text-center text-sm/8 font-medium transition-colors`}>
